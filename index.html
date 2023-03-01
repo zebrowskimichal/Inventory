@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <title>Inventory tracker</title>
+</head>
+<body onload="shops()">
+    <section class="container">
+        <section class="list">
+            <nav>
+                <ul>
+                <li><a href="addItem.html">Add Item</a></li>
+                <li><a href="#view-inventory">View Inventory</a></li>
+                <li><a href="addStorage.html">Add storage</a></li>
+                <li><a href="addCategory.html">Add type/category</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+            <section class="total">
+                <div class="box" id="totalElements">
+                        <p class="box-text">Total Elements</p>
+                </div>
+                <div class="box" id="totalStorages">
+                        <p class="box-text">total-storages</p>                       
+                </div>
+                <div class="box" id="totalCategories">
+                        <p class="box-text">total-categories</p>
+                </div>
+                <div class="box" id="totalMaxElements">
+                        <p class="box-text">total-max-elements</p>
+                </div>
+            </section>
+            <section class="charts">
+
+            </section>
+        
+    </section>
+    <script src="stats.js"></script>
+
+</body>
+</html>
