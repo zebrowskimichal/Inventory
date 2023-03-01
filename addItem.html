@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="links-styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <title>Inventory tracker</title>
+</head>
+<body onload="fetchOptionsData()">
+    <section class="container">
+        <section class="list">
+            <nav>
+                <ul>
+                    <li><a href="addItem.html">Add Item</a></li>
+                    <li><a href="#view-inventory">View Inventory</a></li>
+                    <li><a href="addStorage.html">Add storage</a></li>
+                    <li><a href="addCategory.html">Add type/category</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="input-container">
+            <form id="data">
+                <div class="inputBox">
+                    <input type="text" required id="name">
+                    <span>Enter name</span>
+                </div></br>
+                <div class="inputBox">
+                    <input type="text" required id="barcode">
+                    <span>Enter barcode</span>
+                </div></br>
+                <div class="inputBox">
+                    <select required id="category">
+                        <option value="" selected id="test">Select category</option>
+                    </select>
+                </div></br>  
+                <div class="inputBox">
+                    <select required id="storage">
+                        <option value="" selected>Select storage</option>
+                    </select>
+                </div></br>              
+                <input type="button" value="Add Item" id="addButton" onclick="addItem()">
+            </form> 
+        </section>     
+    </section>
+    <script src="stats.js"></script>
+    <script src="jsjson.js"></script>
+
+</body>
+</html>
