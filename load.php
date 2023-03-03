@@ -4,7 +4,7 @@
     $data = array();
     //Make query
     if($type == 'item'){
-        $query = "SELECT name, barcode, category, storage FROM products;";
+        $query = "SELECT productId, name, barcode, category, storage FROM products;";
     }
     if($type == 'category'){
         $query = "SELECT `name` FROM `categories`";
