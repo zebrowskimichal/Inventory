@@ -30,6 +30,10 @@ function pageLoad(){
     const type = urlParams.get('type');
     load(type);
 }
+function backEdit(){
+    document.getElementsByClassName("editBox")[0].remove();
+    document.getElementById("items").style.display = "block";
+}
 //clickElement funciton- allows user to edit items
 function clickElement(id, type){
     var items = document.getElementById("items");
@@ -41,15 +45,17 @@ function clickElement(id, type){
             throw new Error(response.statusText);
         })
         .then(function (data) {
-            var editForm = document.createElement("form");
-            editForm.id = "editForm";
             var box = document.createElement("div");
             box.className = "editBox";
+            var editForm = document.createElement("form");
+            editForm.id = "editForm";
             var length = Object.keys(data[0]).length;
                 for(var x=1; x<length;x++){
                     dataName = Object.keys(data[0])[x];
-                    editForm.innerHTML += "<input type='text' class='editField' name=" + dataName + " placeholder='" + data[0][dataName] + "'>";
+                    editForm.innerHTML += "<input type='text' required class='editField' placeholder='" + dataName + ": " + data[0][dataName] + "'>";
                 }
+                editForm.innerHTML += "<input type='button' value='Back' class='EditButton' onclick='backEdit();'>";
+                editForm.innerHTML += "<input type='button' value='Change' class='EditButton' onclick='ChangeItem(" + id + ");'>";
             document.getElementsByClassName("container")[0].appendChild(box);
             document.getElementsByClassName("editBox")[0].appendChild(editForm);
             items.style.display = "none";
