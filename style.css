@@ -46,10 +46,11 @@ body {
     width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
+    overflow: auto;
 }
 .itemsBox{
     width: 70%;
-    min-height: 125px;
+    min-height: 80px;
     margin: 0 auto;
     border-top: 1px solid darkgray;
     position: relative;
@@ -59,11 +60,8 @@ body {
     margin-top: 10px;
 }
 .nameBox{
-    font-size: 1.25em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.barcodeBox{
     font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .buttonBoxEdit{
     position:absolute;
@@ -80,12 +78,41 @@ body {
     width: 100%;
     height: 100%;
     background-color: azure;
+    display: flex;
+}
+#editForm{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .editField{
-    display: block;
-    margin: 0 auto;
+    box-sizing:border-box;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
 } 
-#editForm{
-    position: relative;
-    top: 50%;
+.EditButton{
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 25px;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
