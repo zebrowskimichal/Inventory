@@ -20,35 +20,29 @@ function addItem(){
       document.getElementById("data").reset();
   }
 }
-function addCategory(){
+function addValue(valueType){
   if(document.getElementById("name").value.length == 0){
     alert("Please insert some value into `Category name` field!");
   }else{
-      //preparing JSON
+    /*
+    if(valueType == "item"){
+    var formData = {
+        type: "item",
+        name: document.getElementById("name").value,
+        barcode: document.getElementById("barcode").value,
+        category: document.getElementById("category").value,
+        storage: document.getElementById("storage").value
+      };  
+    } else {
       var formData = {
-        type: "category",
+        type: valueType,
         name: document.getElementById("name").value,
       };
-      var jsonData = JSON.stringify(formData);
-      // code to send the jsonData to a server-side script
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("POST","insert.php");
-      xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
-      xmlhttp.send(jsonData);
-      //Reset form inputs
-      document.getElementById("data").reset();
-  }
-  if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-    alert(xmlhttp.responseText);
-}
-}
-function addStorage(){
-  if(document.getElementById("name").value.length == 0){
-    alert("Please insert some value into `Storage name` field!");
-  }else{
+    }
+    */
       //preparing JSON
       var formData = {
-        type: "storage",
+        type: valueType,
         name: document.getElementById("name").value,
       };
       var jsonData = JSON.stringify(formData);
