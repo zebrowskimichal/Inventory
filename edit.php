@@ -5,13 +5,13 @@
     $data = array();
     //Make query
     if($type == 'item'){
-        $query = "SELECT productId, name, barcode, category, storage FROM products WHERE productId = ".$id.";";
+        $query = "SELECT id, name, barcode, category, storage FROM products WHERE id = ".$id.";";
     }
     if($type == 'category'){
-        $query = "SELECT `name` FROM `categories`";
+        $query = "SELECT id, name FROM `categories` WHERE id = ".$id.";";
     }
     if($type == 'storage'){
-        $query = "SELECT `name` FROM `storages`";
+        $query = "SELECT id, name FROM `storages` WHERE id = ".$id.";";
     }
     //Get data from database
     $result = mysqli_query($conn, $query);
