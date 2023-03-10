@@ -4,13 +4,13 @@
     $data = array();
     //Make query
     if($type == 'item'){
-        $query = "SELECT productId, name, barcode, category, storage FROM products;";
+        $query = "SELECT id, name, barcode, category, storage FROM products;";
     }
     if($type == 'category'){
-        $query = "SELECT `name` FROM `categories`";
+        $query = "SELECT id, name FROM `categories`";
     }
     if($type == 'storage'){
-        $query = "SELECT `name` FROM `storages`";
+        $query = "SELECT id, name FROM `storages`";
     }
     //Get data from database
     $result = mysqli_query($conn, $query);
