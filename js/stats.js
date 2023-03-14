@@ -1,6 +1,6 @@
 let statsJSON;
 function shops() {
-    fetch("stats.php")
+    fetch("php/stats.php")
         .then(function (response) {
             if (response.status >= 200 && response.status < 300) {
                 return response.json();
