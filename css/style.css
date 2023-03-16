@@ -67,8 +67,15 @@ body {
     position:absolute;
     right: 5%;
     top: 5%;
-    background: url('icons/edit-bg.png');
+    background: url('../icons/edit-bg.png');
     background-size: cover;
+    width: 50px;
+    height: 50px;
+    object-fit: fill;
+}
+.buttonBoxDelete{
+    position:relative;
+
     width: 50px;
     height: 50px;
     object-fit: fill;
@@ -115,4 +122,22 @@ body {
     transition: all .5s;
     -webkit-user-select: none;
     touch-action: manipulation;
+}
+#editForm select{
+    box-sizing:border-box;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#editForm select:invalid{
+    color: green;
+}
+#editForm select,
+#editForm select option{
+    color: black;
 }
