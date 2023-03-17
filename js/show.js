@@ -54,12 +54,12 @@ function clickElement(id, type){
                 if(type != "item"){
                     for(var x=1; x<length;x++){
                         dataName = Object.keys(data[0])[x];
-                        editForm.innerHTML += "<input type='text' required class='editField' id='" + dataName + "' placeholder='" + dataName + ": " + data[0][dataName] + "'>";
+                        editForm.innerHTML += "<input type='text' required class='editField' id='" + dataName + "' placeholder='" + dataName + ": " + data[0][dataName] + "' value='" + data[0][dataName] + "' onclick='deleteValue(this)'>";
                     }
                 } else {
                     for(var x=1; x<3;x++){
                         dataName = Object.keys(data[0])[x];
-                        editForm.innerHTML += "<input type='text' required class='editField' id='" + dataName + "' placeholder='" + dataName + ": " + data[0][dataName] + "'>";
+                        editForm.innerHTML += "<input type='text' required class='editField' id='" + dataName + "' placeholder='" + dataName + ": " + data[0][dataName] + "' value='" + data[0][dataName] + "' onclick='deleteValue(this)'>";
                     }
                     editForm.innerHTML += "<select required id='category'><option value='' selected id='test'>" + data[0].category + "</option></select>";
                     editForm.innerHTML += "<select required id='storage'><option value='' selected>" + data[0].storage + "</option></select>";
@@ -71,4 +71,7 @@ function clickElement(id, type){
             document.getElementsByClassName("editBox")[0].appendChild(editForm);
             items.style.display = "none";
         });        
+}
+function deleteValue(element){
+    element.value = "";
 }
