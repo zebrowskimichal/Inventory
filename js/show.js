@@ -14,12 +14,12 @@ function load(type, ){
             for(var i=0; i<dataLength;i++){
                 box = document.createElement("div");
                 box.className = "itemsBox";
+                box.innerHTML += "<input type='button' class='buttonBoxEdit' onclick='clickElement(" + data[i].id + ", `" + type + "`)'>"
+                box.innerHTML += "<input type='button' class='buttonBoxDelete' onclick='deleteElement(" + data[i].id + ", `" + type + "`)'>"
                 for(var x=1; x<length;x++){
                     dataName = Object.keys(data[i])[x];
                     box.innerHTML += "<p class='nameBox'>" + dataName + ": " + data[i][dataName] + "</p>";
                 }
-                box.innerHTML += "<input type='button' class='buttonBoxEdit' onclick='clickElement(" + data[i].id + ", `" + type + "`)'>"
-                box.innerHTML += "<input type='button' class='buttonBoxDelete' onclick='deleteElement(" + data[i].id + ", `" + type + "`)'>"
                 items.appendChild(box);
             }
         });           
