@@ -31,11 +31,12 @@ function pageLoad(){
     const type = urlParams.get('type');
     load(type);
 }
+//Function that returns to items list view
 function backEdit(){
     document.getElementsByClassName("editBox")[0].remove();
     document.getElementById("items").style.display = "block";
 }
-//clickElement funciton- allows user to edit items
+//clickElement function- allows user to edit items
 function clickElement(id, type){
     var items = document.getElementById("items");
     fetch("php/edit.php?type=" + type + "&id=" + id)
@@ -72,6 +73,7 @@ function clickElement(id, type){
             items.style.display = "none";
         });        
 }
+//funciton deletes value from inputs
 function deleteValue(element){
     element.value = "";
 }
