@@ -1,3 +1,4 @@
+//Function that sends data to insert.php (inserts data to database)
 function addValue(valueType){
   if(document.getElementById("name").value.length == 0){
     alert("Please insert some value into `Category name` field!");
@@ -34,7 +35,7 @@ function addValue(valueType){
       }
   }
 }
-//Script that gets data: storages, categories from server
+//Script that gets data: storages, categories from server (load.php)
 function fetchOptionsData(){
   fetch("php/load.php?type=category")
         .then(function (response) {
@@ -113,11 +114,9 @@ function deleteElement(valueId, valueType){
     })
     .then(function (response) {
       alert(response);
-      items.innerHTML = ""
+      items.innerHTML = "";
       pageLoad();
     });
-  } else {
-    alert("nie usuwam!");
   }
 
 }
