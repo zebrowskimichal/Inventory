@@ -1,3 +1,4 @@
+//function that fetches stats data from stats.php script
 let statsJSON;
 function shops() {
     fetch("php/stats.php")
@@ -13,6 +14,7 @@ function shops() {
         });
         
 }
+//function that shows stats data to the user
 function load(){
     totalElements.innerHTML += statsJSON[0].numberOfProducts;
     totalStorages.innerHTML += statsJSON[1].totalStorages;
