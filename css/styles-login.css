@@ -1,0 +1,28 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategrey;
+    display: flex;
+}
+.login-box{
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 20%;
+    height: 20%;
+    min-width: 300px;
+    min-height: 300px;
+    box-sizing: border-box;
+    border: 3px solid darkgray;
+    border-radius: 10%;
+}
+#login-form{
+    justify-content: center;
+}
+#login{
+
+}
+#password{
+
+}
