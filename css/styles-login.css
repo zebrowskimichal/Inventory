@@ -16,9 +16,18 @@ body{
     box-sizing: border-box;
     border: 3px solid darkgray;
     border-radius: 10%;
+    display: flex;
 }
 #login-form{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+#login-form input{
+    position: relative;
+
 }
 #login{
 
