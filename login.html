@@ -11,21 +11,22 @@
 </head>
 <body>
     <section class="login-box inputBox">
-        <form id="login-form">
+        <form id="login-form" action="php/login.php" method="post">
             <div class="inputBox">
-                <input type="text" name="login" id="login" required>
-                <span>Login:</span>
+                <input type="text" name="username" id="username" required>
+                <span>Username:</span>
             </div>
             <div class="inputBox">
                 <input type="password" name="password" id="password" required>
                 <span>Password:</span>
             </div>
-            <input type="submit" id="submitButton">
+            <p id="loginStatus"></p>
+            <input type="submit" id="submitButton" value="Log in">
         </form>
   
     </section>
 
-    
+    <script src="js/login.js"></script>
     <!--
     <script src="js/stats.js"></script>
     <script src="js/jsjson.js"></script>
