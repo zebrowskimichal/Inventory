@@ -2,7 +2,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: darkslategrey;
+    background-color: rgba(47, 79, 79, 0.192);
     display: flex;
 }
 .login-box{
@@ -17,6 +17,19 @@ body{
     border: 3px solid darkgray;
     border-radius: 10%;
     display: flex;
+	animation: cien 10s infinite;
+}
+@keyframes cien {
+	0% {
+		box-shadow: 0 0 50px 25px rgba(0, 0, 0, 0.2), 0 0 15px -1px white;
+	}
+	50% {
+		box-shadow: 0 0 50px 45px rgba(255, 255, 255, 0.2),
+			0 0 15px -1px rgb(0, 0, 0);
+	}
+	100% {
+		box-shadow: 0 0 50px 25px rgba(0, 0, 0, 0.2), 0 0 15px -1px white;
+	}
 }
 #login-form{
     margin: 0 auto;
@@ -27,11 +40,17 @@ body{
 }
 #login-form input{
     position: relative;
-
 }
-#login{
+#login-form div{
+    margin: 10px;
+}
+#username{
 
 }
 #password{
 
+}
+#submitButton{
+    box-sizing: border-box;
+    position: relative;
 }
