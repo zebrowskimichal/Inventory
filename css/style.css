@@ -80,6 +80,8 @@ body {
     object-fit: fill;
     float: right;
     margin: 1px;
+    background: url('../icons/bin.png');
+    background-size: cover;
 }
 /*Edit window*/
 .editBox{
